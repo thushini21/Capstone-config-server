@@ -1,12 +1,16 @@
 spring:
   application:
     name: Config-Server
+
   profiles:
-    active: native   # VERY IMPORTANT
+    active: native
 
   cloud:
     config:
       server:
+        git:
+          uri: https://github.com/thushini21/Capstone-Project-Configurations.git
+          search paths: platform, services
         native:
           search-locations:
             - classpath:/Configurations
